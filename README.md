@@ -62,3 +62,26 @@ logging_server.h     93       C-F3      MAJOR
 TOTAL          MAJOR: 10       MINOR: 20      INFO: 3      NOTE: -50
 -------------------------------------------------------------------------------
 ```
+
+### Github Action
+
+Github vous permet d'ajouter des tests automatiques lorsque vous effectuez un push. Vous pouvez tester les fautes de norme dans votre repository.
+
+Vous receverez un mail si le coding style checker détecte des fautes de norme.
+
+Créez un dossier .github/workflows/ à la racine de votre projet.
+Créez un fichier nommé coding_style.yml dans le dossier .github/workflows/ et placez le contenu suivant à l'intérieur du fichier :
+```
+name: Coding style check
+on: push
+jobs:
+  coding_style:
+      name: Coding Style
+      needs: check_program_compilation
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - name: check coding style
+          run: .github/workflows/actions/coding-style-checker/coding-style.sh . .
+```
+commit, push, et le coding style checker se lancera à chaque push!
