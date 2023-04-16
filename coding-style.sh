@@ -61,5 +61,5 @@ then
     exit 0;
 else
     cat_readme
-    return 1;
+    exit 1;
 fi
