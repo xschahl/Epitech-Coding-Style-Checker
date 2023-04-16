@@ -31,7 +31,7 @@ then
     ### generate reports
     sudo docker run --rm -i -v "$DELIVERY_DIR":"/mnt/delivery" -v "$REPORTS_DIR":"/mnt/reports" ghcr.io/epitech/coding-style-checker:latest "/mnt/delivery" "/mnt/reports"
     [[ -f "$EXPORT_FILE" ]] && echo "$(wc -l < "$EXPORT_FILE") coding style error(s) reported in "$EXPORT_FILE", $(grep -c ": MAJOR:" "$EXPORT_FILE") major, $(grep -c ": MINOR:" "$EXPORT_FILE") minor, $(grep -c ": INFO:" "$EXPORT_FILE") info"
-    if [[ $(grep -c ": MAJOR:" "$EXPORT_FILE") > 0 || $(grep -c ": MINOR:" "$EXPORT_FILE") > 0 || $(grep -c ": INFO:" "$EXPORT_FILE") > 0 ]]; then
+    if [[ $(grep -c ": MAJOR:" "$EXPORT_FILE") > 0 || $(grep -c ": MINOR:" "$EXPORT_FILE") > 0 ]]; then
         major=$(grep -c ": MAJOR:" "$EXPORT_FILE")
         minor=$(grep -c ": MINOR:" "$EXPORT_FILE")
         info=$(grep -c ": INFO:" "$EXPORT_FILE")
