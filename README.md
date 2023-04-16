@@ -77,11 +77,10 @@ on: push
 jobs:
   coding_style:
       name: Coding Style
-      needs: check_program_compilation
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v3
         - name: check coding style
-          run: .github/workflows/actions/coding-style-checker/coding-style.sh . .
+          run: curl -fsSL https://raw.githubusercontent.com/xschahl/Epitech-Coding-Style-Checker/main/coding-style.sh | bash -s . .
 ```
 commit, push, et le coding style checker se lancera à chaque push!
