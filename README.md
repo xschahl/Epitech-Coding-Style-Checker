@@ -65,12 +65,12 @@ TOTAL          MAJOR: 10       MINOR: 20      INFO: 3      NOTE: -50
 
 ### Github Action
 
-Github vous permet d'ajouter des tests automatiques lorsque vous effectuez un push. Vous pouvez tester les fautes de norme dans votre repository.
+Github allows you to add automatic tests when you make a push. You can test for standard errors in your repository.
 
-Vous receverez un mail si le coding style checker détecte des fautes de norme.
+You will receive an email if the coding style checker detects standard errors.
 
-Créez un dossier .github/workflows/ à la racine de votre projet.
-Créez un fichier nommé coding_style.yml dans le dossier .github/workflows/ et placez le contenu suivant à l'intérieur du fichier :
+Create a .github/workflows/ folder in the root of your project.
+Create a file named coding_style.yml in the .github/workflows/ folder and place the following content inside the file:
 ```
 name: Coding style check
 on: push
@@ -83,4 +83,4 @@ jobs:
         - name: check coding style
           run: curl -fsSL https://raw.githubusercontent.com/xschahl/Epitech-Coding-Style-Checker/main/coding-style.sh | bash -s . .
 ```
-commit, push, et le coding style checker se lancera à chaque push!
+Commit, Push, and the coding style checker will launch at each Push!
