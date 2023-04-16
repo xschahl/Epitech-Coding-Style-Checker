@@ -21,7 +21,7 @@ Use `coding-style.ps1`
 -------------------------------------------------------------------------------
                           Epitech Coding Style Report
 
-Path: /home/mr_robot/GitRepository/B-NWP-400-STG-4-1-myteams-xavier.schahl
+Path: /path_repository
 -------------------------------------------------------------------------------
 File                 Line     Error     Severity
 -------------------------------------------------------------------------------
