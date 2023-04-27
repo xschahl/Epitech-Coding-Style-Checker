@@ -8,8 +8,9 @@ Requirement :
 Use `coding-style.sh`
 
 It is also possible to generate a report without cloning the file with all the latest updates:
-
-Use `curl -fsSL https://raw.githubusercontent.com/xschahl/Epitech-Coding-Style-Checker/main/coding-style.sh | bash -s`
+```
+curl -fsSL https://raw.githubusercontent.com/xschahl/Epitech-Coding-Style-Checker/main/coding-style.sh | bash -s . .
+```
 
 ### Windows
 
